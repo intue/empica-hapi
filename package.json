@@ -1,0 +1,28 @@
+{
+  "name": "empica-hapi",
+  "version": "0.0.1",
+  "description": "Http API server for empica client apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prnawa/empica-hapi"
+  },
+  "keywords": [
+    "empica",
+    "hapi",
+    "rest-api",
+    "server"
+  ],
+  "author": "Ruwan Nawarathne",
+  "license": "Commercial",
+  "bugs": {
+    "url": "https://github.com/prnawa/empica-hapi/issues"
+  },
+  "homepage": "https://github.com/prnawa/empica-hapi",
+  "dependencies": {
+    "hapi": "^8.1.0"
+  }
+}
