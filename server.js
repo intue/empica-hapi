@@ -1,18 +1,26 @@
-var Hapi = require('hapi');
+
+var server = require('./hapi');
 var config = require('./server/config/settings');
 
-// Create a server with a host and port
-var server = new Hapi.Server();
-
 server.connection({
-    host: config.host,
-    port: config.port
+    port: config.app.port,
+    labels: config.app.lable,
 });
 
+server.connection({
+    port: config.chat.port,
+    labels: config.chat.lable,
+});
+
+// Bootstrap Hapi Server Plugins
+require('./server/config/plugins');
+
 // Add the route
-server.route(require('./server/config/routes'));
+server.select(config.app.lable).route(require('./server/config/routes'));
 
 // Start the server
 server.start(function() {
-	console.log('server is listening on port : ', config.port);
+	console.log('app server is listening on port : ', config.app.port);
+	console.log('chat server is listening on port : ', config.chat.port);
 });
+
