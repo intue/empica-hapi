@@ -2,7 +2,7 @@
   "name": "empica-hapi",
   "version": "0.0.1",
   "description": "Http API server for empica client apps",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "npm test"
   },
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/prnawa/empica-hapi",
   "dependencies": {
-    "hapi": "^8.1.0"
+    "hapi": "^8.1.0",
+    "require-directory": "^2.0.0"
   }
 }
