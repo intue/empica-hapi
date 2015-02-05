@@ -7,6 +7,11 @@ module.exports = [
 	{
 		method: 'GET',
 	    path:'/health',
-	    config: controller.base.health
+	    handler: controller.base.health,
+	    config: {
+	    	description: 'Updates health status',
+	        notes: 'will be used for load balancing api servers',
+	        tags: ['api', 'health']
+	    }
 	}
 ];
